@@ -4,6 +4,7 @@
 {
 	"sven_storm_bolt_ts" {
 		"BaseClass" "ability_lua"
+		"AbilityTextureName" "sven_storm_bolt"
         "ScriptFile" "abilities/sven_storm_bolt_ts"
 		"AbilityValues" {
 			"damage" "0.1 0.2 0.3 0.4"
@@ -18,6 +19,7 @@
 	}
 	"sven_sheld_ts" {
 		"BaseClass" "ability_lua"
+		"AbilityTextureName" "sven_warcry"
         "ScriptFile" "abilities/sven_sheld_ts"
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityValues" {
@@ -30,5 +32,10 @@
 		"AbilityCooldown" "1 2 3 4 "
 		"AbilityManaCost" "1 2 3 4"
 
+	}
+	"sven_great_cleave_ts" {
+		"BaseClass" "ability_lua"
+		"AbilityTextureName" "sven_great_cleave"
+		"ScriptFile" "abilities/sven_great_cleave_ts"
 	}
 }
