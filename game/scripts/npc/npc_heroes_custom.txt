@@ -13,6 +13,15 @@
 		"Ability1"		"sven_storm_bolt_ts"
 		"Ability2"		"sven_great_cleave_ts"
 		"Ability3"		"sven_sheld_ts"
+		"Ability6"		"sven_god_strength_ts"
+		"Ability10"     "special_bonus_unique_warcry_duration"
+		"Ability11"     "special_bonus_attack_speed_15"
+		"Ability12"     "special_bonus_unique_sven_cleave_35"
+		"Ability13"     "special_bonus_unique_sven_god_strength_cooldown_15"
+		"Ability14"     "special_bonus_unique_sheld_armor"
+		"Ability15"	    "special_bonus_unique_speed"
+		"Ability16"	    "special_bonus_unique_storm_bolt_duration"
+		"Ability17"	    "special_bonus_unique_god_strength_damage"
 	}
 
 }

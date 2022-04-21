@@ -18,5 +18,7 @@ export class sven_sheld_ts extends BaseAbility {
         for (const hero of friends) {
             hero.AddNewModifier(this.GetCaster(), this, modifier_sven_sheld_ts.name, { duration: duration })
         }
+        EmitSoundOn("Hero_Sven.WarCry", this.GetCaster())
+        this.GetCaster().StartGesture(GameActivity.DOTA_OVERRIDE_ABILITY_3);
     }
 }

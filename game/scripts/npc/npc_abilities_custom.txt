@@ -6,10 +6,15 @@
 		"BaseClass" "ability_lua"
 		"AbilityTextureName" "sven_storm_bolt"
         "ScriptFile" "abilities/sven_storm_bolt_ts"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityValues" {
 			"damage" "0.1 0.2 0.3 0.4"
-			"duration" "1 2 3 4"
-			"var_3" "1000 2000 30000 40000"
+			"duration" {
+				"value"	 "1 2 3 4"
+				"special_bonus_unique_storm_bolt_duration" "+1.25"
+			}
 
 		}
 		"MaxLevel" "4"
@@ -23,9 +28,19 @@
         "ScriptFile" "abilities/sven_sheld_ts"
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityValues" {
-			"damage" "0.1 0.2 0.3 0.4"
-			"duration" "1 2 3 4"
-			"armor_bonus" "1000 2000 30000 40000"
+			"cool_down" "8"
+			"speed_bonus" {
+				"value" "8 12 16 20"	
+				"special_bonus_unique_speed" "+8"
+			}
+			"duration" {
+				"value" "3"
+				"special_bonus_unique_warcry_duration" "+3"
+			}
+			"armor_bonus" {
+				"value"  "1000 2000 30000 40000"
+				"special_bonus_unique_sheld_armor" "+500"
+			}
 
 		}
 		"MaxLevel" "4"
@@ -36,6 +51,72 @@
 	"sven_great_cleave_ts" {
 		"BaseClass" "ability_lua"
 		"AbilityTextureName" "sven_great_cleave"
+		"AbilityValues" {
+			"cleave_damage"{
+				"value" "25 50 75 100"
+				"special_bonus_unique_sven_cleave_35" "+35"
+			}
+		}
 		"ScriptFile" "abilities/sven_great_cleave_ts"
+	}
+	"sven_god_strength_ts" {
+		"BaseClass" "ability_lua"
+		"AbilityTextureName" "sven_gods_strength"
+		"ScriptFile" "abilities/sven_god_strength_ts"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCooldown" "20 30 40 50"
+		"AbilityValues" {
+			"duration" "3 5 7"
+			"damage_percent"{
+				"value" "100 200 300"
+				"special_bonus_unique_god_strength_damage" "+50"
+			}
+			"cool_down" {
+				"value" "20 30 40 50"
+				"special_bonus_unique_sven_god_strength_cooldown_15" "-15"
+			}
+		}
+	}
+	"special_bonus_unique_warcry_duration" {
+		"BaseClass" "special_bonus_undefined"
+		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior" "DOTA_ABILITT_BEHAVIOR_PASSIVE"
+		"IsTalent" "1"
+	}
+	"special_bonus_unique_sven_cleave_35" {
+		"BaseClass" "special_bonus_undefined"
+		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior" "DOTA_ABILITT_BEHAVIOR_PASSIVE"
+		"IsTalent" "1"
+	}
+	"special_bonus_unique_sven_god_strength_cooldown_15" {
+		"BaseClass" "special_bonus_undefined"
+		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior" "DOTA_ABILITT_BEHAVIOR_PASSIVE"
+		"IsTalent" "1"
+	}
+	"special_bonus_unique_sheld_armor" {
+		"BaseClass" "special_bonus_undefined"
+		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior" "DOTA_ABILITT_BEHAVIOR_PASSIVE"
+		"IsTalent" "1"
+	}
+	"special_bonus_unique_speed" {
+		"BaseClass" "special_bonus_undefined"
+		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior" "DOTA_ABILITT_BEHAVIOR_PASSIVE"
+		"IsTalent" "1"
+	}
+	"special_bonus_unique_storm_bolt_duration" {
+		"BaseClass" "special_bonus_undefined"
+		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior" "DOTA_ABILITT_BEHAVIOR_PASSIVE"
+		"IsTalent" "1"
+	}
+	"special_bonus_unique_god_strength_damage" {
+		"BaseClass" "special_bonus_undefined"
+		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior" "DOTA_ABILITT_BEHAVIOR_PASSIVE"
+		"IsTalent" "1"
 	}
 }
