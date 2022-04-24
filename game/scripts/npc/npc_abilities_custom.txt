@@ -80,43 +80,244 @@
 	"special_bonus_unique_warcry_duration" {
 		"BaseClass" "special_bonus_undefined"
 		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior" "DOTA_ABILITT_BEHAVIOR_PASSIVE"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"IsTalent" "1"
 	}
 	"special_bonus_unique_sven_cleave_35" {
 		"BaseClass" "special_bonus_undefined"
 		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior" "DOTA_ABILITT_BEHAVIOR_PASSIVE"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"IsTalent" "1"
 	}
 	"special_bonus_unique_sven_god_strength_cooldown_15" {
 		"BaseClass" "special_bonus_undefined"
 		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior" "DOTA_ABILITT_BEHAVIOR_PASSIVE"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"IsTalent" "1"
 	}
 	"special_bonus_unique_sheld_armor" {
 		"BaseClass" "special_bonus_undefined"
 		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior" "DOTA_ABILITT_BEHAVIOR_PASSIVE"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"IsTalent" "1"
 	}
 	"special_bonus_unique_speed" {
 		"BaseClass" "special_bonus_undefined"
 		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior" "DOTA_ABILITT_BEHAVIOR_PASSIVE"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"IsTalent" "1"
 	}
 	"special_bonus_unique_storm_bolt_duration" {
 		"BaseClass" "special_bonus_undefined"
 		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior" "DOTA_ABILITT_BEHAVIOR_PASSIVE"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"IsTalent" "1"
 	}
 	"special_bonus_unique_god_strength_damage" {
 		"BaseClass" "special_bonus_undefined"
 		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior" "DOTA_ABILITT_BEHAVIOR_PASSIVE"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"IsTalent" "1"
+	}
+	"magic_missile_ts" {
+		"BaseClass" "ability_lua"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityTextureName" "vengefulspirit_magic_missile"
+		"ScriptFile" "abilities/magic_missile_ts"
+		"AbilityValues" {
+			"damage" {
+ 				"value" "10 20 30 40"
+				"special_bonus_unique_vs_6" "+200"
+			}
+			"duration" "1 2 3 4"
+			"cool_down"  {
+				"value" "3 4 5 6"	
+				"special_bonus_unique_vs_3" "-2.75"
+			}
+			"cast_range" "575 600 625 650"
+			"speed" "1350"
+		}
+		"AbilityManaCost" "2 4 6 8"
+	}
+	"wave_of_terror_ts" {
+		"BaseClass" "ability_lua"
+		"AbilityTextureName" "vengefulspirit_wave_of_terror"
+		"ScriptFile" "abilities/wave_of_terror_ts"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityValues" {
+			"damage" "10 20 30 40"
+			"width"  "225"
+			"duration" "8"
+			"cool_down" "16 14 12 10"
+			"armor_reduce" {
+				"value" "3 4 5 6"
+				"special_bonus_unique_vs_4" "+2"
+			} 
+			"cast_range" "1400"
+			"effect_radius" "325"
+			"speed" "1350"
+		}
+		"AbilityManaCost" "2 4 6 8"
+	}
+	"vengeance_aura_ts" {
+		"BaseClass" "ability_lua"
+		"AbilityTextureName" "vengefulspirit_command_aura"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityValues" {
+			"damage_bonus"{
+				"value" "11 18 25 32"
+				"special_bonus_unique_vs_8" "+35"
+			}
+			"aura_radius" "1450"
+		}
+		"ScriptFile" "abilities/vengeance_aura_ts"
+	}
+	"nether_swap_ts"
+	{
+		"BaseClass" "ability_lua"
+		"AbilityTextureName" "vengefulspirit_nether_swap"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+		"MaxLevel" "3"
+		"ScriptFile" "abilities/nether_swap_ts"
+		"AbilityValues"	 {
+			"damage" "50"
+			"damage_reduce_duration" "3" 
+			"damage_reduce" "80 90 100"
+			"cool_down" {
+				"value" "15 25 35"	
+				"special_bonus_unique_vs_5" "-14"
+			} 
+		}
+		"AbilityCooldown"		"15 25 35"
+		"AbilityManaCost"		"100"
+		//todo：可以对自己施放bug
+		"CastFilterRejectCaster" "1"
+		"AbilityCastRange"		"800 900 1000"
+		"AbilityCastPoint"		"0.3"
+	}
+	"special_bonus_unique_vs_3" {
+		"BaseClass" "special_bonus_undefined"
+		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	"special_bonus_unique_vs_4" {
+		"BaseClass" "special_bonus_undefined"
+		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	"special_bonus_unique_vs_5" {
+		"BaseClass" "special_bonus_undefined"
+		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	"special_bonus_unique_vs_6" {
+		"BaseClass" "special_bonus_undefined"
+		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	"special_bonus_unique_vs_7" {
+		"BaseClass" "special_bonus_undefined"
+		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	"special_bonus_unique_vs_8" {
+		"BaseClass" "special_bonus_undefined"
+		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	"dragon_slave_ts" {
+		"BaseClass" "ability_lua"
+		"AbilityTextureName" "lina_dragon_slave"
+		"ScriptFile" "abilities/dragon_slave_ts"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityValues" {
+			"damage" "10 20 30 40"
+			"width"  "225"
+			"cool_down"  {
+				"value" "16 14 12 10"
+				"special_bonus_unique_lina_ts_1" "-3.5"
+			}
+			"distance" "1400"
+			"start_radius" "225"
+			"end_radius" "325"
+			"speed" "1350"
+		}
+		"AbilityManaCost" "2 4 6 8"
+		"AbilityCooldown"		"16 14 12 10"
+	}
+	"light_strike_array_ts" {
+		"BaseClass" "ability_lua"
+		"AbilityTextureName" "lina_light_strike_array"
+		"ScriptFile" "abilities/light_strike_array_ts"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityValues" {
+			"delay" "0.5"
+			"duration" "1 2 3 4"
+			"damage"  {
+				"value" "10 20 30 40"
+				"special_bonus_unique_lina_ts_3" "100"
+			}
+			"cool_down" "16 14 12 10"
+			"distance" "1400"
+			"radius" "325"
+		}
+		"AbilityManaCost" "2 4 6 8"
+	}
+	"fiery_soul_ts" {
+		"BaseClass" "ability_lua"
+		"AbilityTextureName" "lina_fiery_soul"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues" {
+			"speed_bonus" {
+				"value" "20 30 40 50"
+				"special_bonus_unique_lina_ts_5" "10"
+			} 
+			"attack_speed" {
+				"value" "20 30 40 50"
+				"special_bonus_unique_lina_ts_5" "20"
+			}
+			"duration" "3"
+			"damage_per" "10"
+			"max_stack" "7"
+		}
+		"ScriptFile" "abilities/fiery_soul_ts"
+	}
+	"laguna_blade_ts" {
+		"BaseClass" "ability_lua"
+		"AbilityTextureName" "lina_laguna_blade"
+		"AbilityValues" {
+			"cool_down"  {
+				"value" "20 30 40 50"
+				"special_bonus_unique_lina_ts_8" "-15"
+			}
+			"damage" "100 200 300"
+			"damage_delay" "0.25"
+		}
+		"AbilityCooldown"		"20 30 40 50"
+		"ScriptFile" "abilities/laguna_blade_ts"
+	}
+	"special_bonus_unique_lina_ts_1" {
+		"BaseClass" "special_bonus_undefined"
+		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	"special_bonus_unique_lina_ts_3" {
+		"BaseClass" "special_bonus_undefined"
+		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	"special_bonus_unique_lina_ts_5" {
+		"BaseClass" "special_bonus_undefined"
+		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	"special_bonus_unique_lina_ts_8" {
+		"BaseClass" "special_bonus_undefined"
+		"AbilityType" "DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	}
 }

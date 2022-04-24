@@ -26,3 +26,58 @@
 "DOTA_Tooltip_ability_special_bonus_unique_speed"		"+{s:bonus_speed_bonus}% 战吼移速加成"
 "DOTA_Tooltip_ability_special_bonus_unique_storm_bolt_duration"		"+{s:bonus_duration}% 风暴之锤眩晕时间"
 "DOTA_Tooltip_ability_special_bonus_unique_god_strength_damage"		"+{s:bonus_damage_percent}% 神之力量攻击力"
+//vs
+"DOTA_Tooltip_ability_magic_missile_ts"		"魔法箭"
+"DOTA_Tooltip_ability_magic_missile_ts_Description"		"一只平平无奇的魔法箭"
+"DOTA_Tooltip_ability_magic_missile_ts_damage"		"伤害"
+"DOTA_Tooltip_ability_magic_missile_ts_duration"		"眩晕时间"
+"DOTA_Tooltip_ability_magic_missile_ts_cast_range"		"施法距离"
+
+"DOTA_Tooltip_ability_wave_of_terror_ts"		"恐怖嚎叫"
+"DOTA_Tooltip_ability_wave_of_terror_ts_Description"		"这吼声恐怖如斯"
+"DOTA_Tooltip_ability_wave_of_terror_ts_damage"		"伤害"
+"DOTA_Tooltip_ability_wave_of_terror_ts_armor_reduce"		"护甲减少"
+"DOTA_Tooltip_ability_wave_of_terror_ts_duration"		"减甲持续时间"
+
+"DOTA_Tooltip_ability_vengeance_aura_ts"		"命令光环"
+"DOTA_Tooltip_ability_vengeance_aura_ts_Description"		"我命令你加攻"
+"DOTA_Tooltip_ability_vengeance_aura_ts_damage_bonus"		"攻击加成百分比"
+"DOTA_Tooltip_ability_vengeance_aura_ts_aura_radius"		"光环范围"
+
+"DOTA_Tooltip_ability_nether_swap_ts"		"交换"
+"DOTA_Tooltip_ability_nether_swap_ts_Description"		"我想和他换"
+"DOTA_Tooltip_ability_nether_swap_ts_damage"		"伤害"
+"DOTA_Tooltip_ability_nether_swap_ts_damage_reduce"		"友军伤害减免百分比"
+"DOTA_Tooltip_ability_nether_swap_ts_damage_reduce_duration"		"伤害减免持续时间"
+//vs_talent
+"DOTA_Tooltip_ability_special_bonus_unique_vs_3"		"-{s:bonus_cool_down} 秒魔法箭冷却"
+"DOTA_Tooltip_ability_special_bonus_unique_vs_4"		"-{s:bonus_armor_reduce} 恐怖嚎叫降低护甲"
+"DOTA_Tooltip_ability_special_bonus_unique_vs_5"		"-{s:bonus_cool_down}秒 交换冷却"
+"DOTA_Tooltip_ability_special_bonus_unique_vs_6"		"+{s:bonus_damage} 魔法箭伤害"
+"DOTA_Tooltip_ability_special_bonus_unique_vs_7"		"魔法箭无视技能免疫"
+"DOTA_Tooltip_ability_special_bonus_unique_vs_8"		"+{s:bonus_damage_bonus}% 复仇光环攻击力加成"
+//lina
+"DOTA_Tooltip_ability_dragon_slave_ts"		"龙破斩"
+"DOTA_Tooltip_ability_dragon_slave_ts_Description"		"就是龙喷火"
+"DOTA_Tooltip_ability_dragon_slave_ts_damage"		"伤害"
+
+"DOTA_Tooltip_ability_light_strike_array_ts"		"光击阵"
+"DOTA_Tooltip_ability_light_strike_array_ts_Description"		"巨龙之力！"
+"DOTA_Tooltip_ability_light_strike_array_ts_damage"		"伤害"
+"DOTA_Tooltip_ability_light_strike_array_ts_duration"		"眩晕时间"
+
+"DOTA_Tooltip_ability_fiery_soul_ts"		"炽魂"
+"DOTA_Tooltip_ability_fiery_soul_ts_Description"		"越战越勇"
+"DOTA_Tooltip_ability_fiery_soul_ts_speed_bonus"		"移速提升百分比"
+"DOTA_Tooltip_ability_fiery_soul_ts_attack_speed"		"攻速提升百分比"
+"DOTA_Tooltip_ability_fiery_soul_ts_max_stack"		"最大层数"
+"DOTA_Tooltip_ability_fiery_soul_ts_duration"		"持续时间"
+
+"DOTA_Tooltip_ability_laguna_blade_ts"		"火女大"
+"DOTA_Tooltip_ability_laguna_blade_ts_Description"		"很快啊"
+"DOTA_Tooltip_ability_laguna_blade_ts_damage"		"伤害"
+
+"DOTA_Tooltip_ability_special_bonus_unique_lina_ts_1"		"-{s:bonus_cool_down}秒 龙破斩冷却"
+"DOTA_Tooltip_ability_special_bonus_unique_lina_ts_3"		"+{s:bonus_damage} 光击阵伤害"
+"DOTA_Tooltip_ability_special_bonus_unique_lina_ts_5"		"+{s:bonus_attack_speed}/{s:bonus_speed_bonus}% 炽魂效果"
+"DOTA_Tooltip_ability_special_bonus_unique_lina_ts_8"		"-{s:bonus_cool_down} 火女大冷却"
